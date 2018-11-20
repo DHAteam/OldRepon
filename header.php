@@ -6,8 +6,9 @@ session_start();
 //nếu chưa, chuyển hướng người dùng ra lại trang đăng nhập
 if (!isset($_SESSION["current_user"])) { ?>
 	<div id="logside">
-	<a href = "login.php"><div class="log">Login</div></a>
-	<a href = "#"><div class="log">Sign up</div></a>
+	<a href = "login.php">Login</a>
+	/
+	<a href = "#">Sign up</a>
 	</div> <?php ;
 }
 else { ?>

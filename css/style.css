@@ -7,6 +7,7 @@ body {
 
 #main {
     width:70%;
+    min-width: 400px;
     margin:auto;
 }
 
@@ -22,20 +23,9 @@ body {
     height:96px;
 }
 #header #logside {
-    width:680px;
     float:right;
 }
-#header #logside .log {
-    width:80px;
-    float: right;
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 14px;
-	margin-right:15px;
-    margin-top: 32px;
-    padding: 4px 0;
-    text-transform: uppercase;
-}
+
 
 a:link, a:visited {
     text-decoration:none;
@@ -88,6 +78,7 @@ a:link, a:visited {
     float:right;
     min-height:200px;
     background:green;
+    overflow: hidden;
 }
 
 
