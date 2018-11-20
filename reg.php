@@ -7,14 +7,17 @@
         $checkInfo = 1;
         $checkNotExist = 1;
 		if (isset($_POST["btnLogin"])) {
+  			//lấy thông tin từ các form bằng phương thức POST
   			$username = $_POST["txtUserName"];
   			$password = $_POST["txtPassword"];
  			$name = $_POST["txtName"];
   			$email = $_POST["txtEmail"];
+  			//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
 			if ($username == "" || $password == "" || $name == "" || $email == "") {
                 $checkInfo = 0;
             }
             else {
+  					// Kiểm tra tài khoản đã tồn tại chưa
   					$sql="select * from users where username='$username'";
 					$rs = load($sql);
                 
@@ -22,7 +25,9 @@
 						$checkNotExist = 0;
                     }
                     else {
+						//thực hiện việc lưu trữ dữ liệu vào db
 	    				$sqlquery = "insert into users(userName,userPwd,userFullName,userEmail) values ('$username','$password','$name','$email')";
+					    // thực thi câu $sql với biến conn lấy từ file connection.php
                         $add = load($sqlquery);
                         $_SESSION["current_user"]->userName = $username;
 				        $_SESSION["loged"] = 1;   
