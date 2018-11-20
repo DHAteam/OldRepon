@@ -13,8 +13,8 @@ if (!isset($_SESSION["current_user"])) { ?>
 }
 else { ?>
 	<div id="logside">
-	<a href = "logout.php"><div class="log">Thoát</div></a>
 	<div class="log">Xin chào! <?php echo $_SESSION["current_user"]->userName; ?></div>
+	<a href = "logout.php"><div class="log">Thoát</div></a>
 	</div> <?php ;
 }
 ?>
