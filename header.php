@@ -8,7 +8,7 @@ if (!isset($_SESSION["current_user"])) { ?>
 	<div id="logside">
 	<a href = "login.php">Login</a>
 	/
-	<a href = "#">Sign up</a>
+	<a href = "reg.php">Sign up</a>
 	</div> <?php ;
 }
 else { ?>

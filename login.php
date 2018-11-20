@@ -5,20 +5,26 @@
 	}
 
 	require_once 'config.php';
-    $flag = 1;
+	$flag = 1;
+	$checkInfo = 1;
 	if (isset($_POST["btnLogin"])) {
 		$username = $_POST["txtUserName"];
 		$password = $_POST["txtPassword"];
 		//enc_password = $password;//md5($password);
-
-		$sql = "select * from users where userName = '$username'"; //and userPwd = '$enc_password'";
-		$rs = load($sql);
-		if ($rs->num_rows > 0) {
-			$_SESSION["current_user"] = $rs->fetch_object();
-			$_SESSION["loged"] = 1;
-            header("Location: index.php");
-		} else {
-			$flag = 0;
+		if ($username == "" || $password == "") {
+			$checkInfo = 0;
+		}
+		else {
+			$sql = "select * from users where userName = '$username'"; //and userPwd = '$enc_password'";
+			$rs = load($sql);
+			if ($rs->num_rows > 0) {
+				$_SESSION["current_user"] = $rs->fetch_object();
+				$_SESSION["loged"] = 1;
+				header("Location: index.php");
+			}
+			else {
+				$flag = 0;
+			}
 		}
 	}
 ?>
@@ -40,7 +46,11 @@
 
                 <?php if(!$flag) { ?>
                 <label><?php if(!$flag) echo "Có lỗi" ?></label>
-                <?php }?>
+				<?php }?>
+				
+				<?php if (!$checkInfo) { ?>
+				<label><?php if(!$checkInfo) echo "Thông tin không được để trống" ?></label>
+				<?php }?>
                 
 					<div class="form-group">
 						<label for="txtUserName">Tên đăng nhập</label>
