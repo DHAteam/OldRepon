@@ -60,6 +60,25 @@
 						<label for="txtPassword">Mật khẩu</label>
 						<input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="******">
 					</div>
+
+<div  class="captcha">
+	<div class="spinner">
+
+		<label>
+			<input type="checkbox" onclick="$(this).attr('disabled','disabled');">
+			<span class="checkmark"><span>&nbsp;</span></span>
+		</label>
+	</div>
+	<div class="text">
+		I'm not a robot
+	</div>
+	<div class="logo">
+		<img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/" width="10%" />
+		<p>reCAPTCHA</p>
+		<small>Privacy - Terms</small>
+	</div>
+</div>
+<div>
 					<button type="submit" class="btn btn-success btn-block" name="btnLogin">
 						<span class="glyphicon glyphicon-user"></span>
 						Đăng nhập
@@ -70,5 +89,6 @@
 	</div>
 	<script src="assets/jquery-3.1.1.min.js"></script>
 	<script src="assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
 </body>
 </html>

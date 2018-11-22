@@ -54,6 +54,7 @@
 				<?php if (!$checkInfo) { ?>
 				<label><?php if(!$checkInfo) echo "Thông tin không được để trống" ?></label>
 				<?php }?>
+
                 
 					<div class="form-group">
 						<label for="txtUserName">Tên đăng nhập</label>
@@ -69,12 +70,14 @@
 					</div>
 					<div class="form-group">
 						<label for="txtEmail">Email</label>
-						<input type="text" class="form-control" id="txtEmail" name="txtEmail" placeholder="******">
+						<input type="text" class="form-control" id="txtEmail" name="txtEmail" placeholder="abc@gmail.com.vn">
 					</div>
+					
 					<button type="submit" class="btn btn-success btn-block" name="btnLogin">
 						<span class="glyphicon glyphicon-user"></span>
 						Đăng ký
 					</button>
+
 				</form>
 			</div>
 		</div>
