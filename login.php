@@ -79,10 +79,11 @@
 	</div>
 </div>
 <div>
-					<button type="submit" class="btn btn-success btn-block" name="btnLogin">
-						<span class="glyphicon glyphicon-user"></span>
-						Đăng nhập
-					</button>
+	<span class="msg-error error"></span>
+<div id="recaptcha" class="g-recaptcha" data-sitekey="6Ld4Jh8TAAAAAD2tURa21kTFwMkKoyJCqaXb0uoK"></div>
+
+<button class="btn" id="btn-validate">Đăng nhập</button>
+					
 				</form>
 			</div>
 		</div>

@@ -1,5 +1,7 @@
-<div id="logo" style = "font-size: 40px;">Logo<BR>here</div>	
 
+
+<div id="logo" ><a href="#"><img src="../Web1/img/logo.jpg" width="20%"> </a><br><b><span style="color:blue">PET NYNN</span></b> </div>
+	
 <?php
 session_start();
 //tiến hành kiểm tra là người dùng đã đăng nhập hay chưa
